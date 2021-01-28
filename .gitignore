@@ -26,7 +26,6 @@ nohup.out
 ### Java ###
 *.class
 
-
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
@@ -107,6 +106,10 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9ba744d3750c0360e3b14616499a9367d60594d9
 ### Eclipse ###
 *.pydevproject
 .metadata
@@ -144,6 +147,9 @@ local.properties
 
 # TeXlipse plugin
 .texlipse
+<<<<<<< HEAD
 
 # Visual Studio Code
 .vscode
+=======
+>>>>>>> 9ba744d3750c0360e3b14616499a9367d60594d9
