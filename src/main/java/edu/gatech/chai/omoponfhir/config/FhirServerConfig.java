@@ -73,13 +73,15 @@ public class FhirServerConfig {
 	private Properties jpaProperties() {
 		Properties extraProperties = new Properties();
 		extraProperties.put("hibernate.dialect", org.hibernate.dialect.PostgreSQL94Dialect.class.getName());
+		extraProperties.put("hibernate.physical_naming_strategy", org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl.class.getName());
 //		extraProperties.put("hibernate.dialect", edu.gatech.chai.omopv6.jpa.enity.noomop.OmopPostgreSQLDialect.class.getName());
 		extraProperties.put("hibernate.format_sql", "true");
-		extraProperties.put("hibernate.show_sql", "false");
-		extraProperties.put("hibernate.hbm2ddl.auto", "update");
+		extraProperties.put("hibernate.show_sql", "true");
+		extraProperties.put("hibernate.hbm2ddl.auto", "none");
 //		extraProperties.put("hibernate.hbm2ddl.auto", "none");
 //		extraProperties.put("hibernate.enable_lazy_load_no_trans", "true");
 		extraProperties.put("hibernate.jdbc.batch_size", "20");
+		extraProperties.put("hibernate.default_schema", System.getenv("SCHEMA_NAME"));
 		extraProperties.put("hibernate.cache.use_query_cache", "false");
 		extraProperties.put("hibernate.cache.use_second_level_cache", "false");
 		extraProperties.put("hibernate.cache.use_structured_entries", "false");
